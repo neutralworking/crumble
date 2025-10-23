@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crumble - Artisan Marketplace &amp; Design Collective</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <h1 class="logo__text">Crumble</h1>
+                    <p class="logo__tagline">Curated Artisan Collective</p>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="mobile-menu-toggle__line"></span>
+                    <span class="mobile-menu-toggle__line"></span>
+                    <span class="mobile-menu-toggle__line"></span>
+                </button>
+                
+                <nav class="nav">
+                    <div class="nav__overlay"></div>
+                    <div class="nav__mobile-header">
+                        <span class="nav__mobile-title">Menu</span>
+                        <button class="nav__mobile-close" aria-label="Close navigation menu">×</button>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active" data-section="home">Home</a>
+                        </li>
+                        <li class="nav__item dropdown">
+                            <a href="#ceramics" class="nav__link" data-section="ceramics">Ceramics</a>
+                            <button class="dropdown__toggle" aria-label="Toggle ceramics submenu">+</button>
+                            <ul class="dropdown__menu">
+                                <li><a href="#ceramics" class="dropdown__link" data-section="ceramics" data-filter="vases">Vases</a></li>
+                                <li><a href="#ceramics" class="dropdown__link" data-section="ceramics" data-filter="bowls">Bowls</a></li>
+                                <li><a href="#ceramics" class="dropdown__link" data-section="ceramics" data-filter="dinnerware">Dinnerware</a></li>
+                                <li><a href="#ceramics" class="dropdown__link" data-section="ceramics" data-filter="decorative">Decorative Pieces</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item dropdown">
+                            <a href="#jewelry" class="nav__link" data-section="jewelry">Jewelry</a>
+                            <button class="dropdown__toggle" aria-label="Toggle jewelry submenu">+</button>
+                            <ul class="dropdown__menu">
+                                <li><a href="#jewelry" class="dropdown__link" data-section="jewelry" data-filter="earrings">Earrings</a></li>
+                                <li><a href="#jewelry" class="dropdown__link" data-section="jewelry" data-filter="bracelets">Bracelets</a></li>
+                                <li><a href="#jewelry" class="dropdown__link" data-section="jewelry" data-filter="necklaces">Necklaces</a></li>
+                                <li><a href="#jewelry" class="dropdown__link" data-section="jewelry" data-filter="rings">Rings</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item dropdown">
+                            <a href="#accessories" class="nav__link" data-section="accessories">Accessories</a>
+                            <button class="dropdown__toggle" aria-label="Toggle accessories submenu">+</button>
+                            <ul class="dropdown__menu">
+                                <li><a href="#accessories" class="dropdown__link" data-section="accessories" data-filter="homedecor">Home Decor</a></li>
+                                <li><a href="#accessories" class="dropdown__link" data-section="accessories" data-filter="glassware">Glassware</a></li>
+                                <li><a href="#accessories" class="dropdown__link" data-section="accessories" data-filter="textiles">Textiles</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#creators" class="nav__link" data-section="creators">Creators</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link" data-section="about">About Us</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link" data-section="contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="header__actions">
+                    <div class="search-icon">🔍</div>
+                    <div class="cart-icon">🛒</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Section -->
+        <section id="home" class="section section--home active">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero__content">
+                    <h2 class="hero__title">Exceptional Artistry, Exclusively Curated</h2>
+                    <p class="hero__subtitle">Each piece tells a story of dedication, craftsmanship, and timeless beauty</p>
+                    <p class="hero__philosophy">Where Imperfection Meets Perfection</p>
+                    <button class="btn btn--primary hero__cta">Discover Our Collection</button>
+                </div>
+            </div>
+            
+            <!-- Featured Categories -->
+            <div class="container">
+                <section class="featured-categories">
+                    <h3 class="section__title">Curated Collections</h3>
+                    <div class="category-grid">
+                        <div class="category-card" data-section="ceramics">
+                            <div class="category-card__image">🏺</div>
+                            <h4 class="category-card__title">Ceramics</h4>
+                            <p class="category-card__description">Sculptural vessels and functional art</p>
+                        </div>
+                        <div class="category-card" data-section="jewelry">
+                            <div class="category-card__image">💎</div>
+                            <h4 class="category-card__title">Fine Jewelry</h4>
+                            <p class="category-card__description">Wearable sculptures for the discerning collector</p>
+                        </div>
+                        <div class="category-card" data-section="accessories">
+                            <div class="category-card__image">🏠</div>
+                            <h4 class="category-card__title">Curated Objects</h4>
+                            <p class="category-card__description">Exceptional pieces for refined living</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Fresh out of furnace -->
+                <section class="featured-products">
+                    <h3 class="section__title">New Arrivals</h3>
+                    <p class="section__subtitle">Recently added to our curated collection</p>
+                    <div class="product-grid" id="featured-products-grid">
+                        <!-- Products will be loaded by JavaScript -->
+                    </div>
+                </section>
+                
+                <!-- Creators Section on Homepage -->
+                <section class="homepage-creators">
+                    <h3 class="section__title">Master Artisans</h3>
+                    <p class="section__subtitle">Meet the exceptional creators behind each unique piece</p>
+                    <div class="creators-grid">
+                        <div class="creator-card" data-creator="elena">
+                            <div class="creator-card__image">👩‍🎨</div>
+                            <h4 class="creator-card__name">Elena Torres</h4>
+                            <p class="creator-card__specialty">Master Ceramicist</p>
+                            <p class="creator-card__bio">Celebrated for her organic architectural forms</p>
+                            <button class="btn btn--outline creator-card__cta">Explore Atelier</button>
+                        </div>
+                        
+                        <div class="creator-card" data-creator="marcus">
+                            <div class="creator-card__image">👨‍🎨</div>
+                            <h4 class="creator-card__name">Marcus Weber</h4>
+                            <p class="creator-card__specialty">Glass Sculptor</p>
+                            <p class="creator-card__bio">Third-generation master of Bohemian glasswork</p>
+                            <button class="btn btn--outline creator-card__cta">Explore Atelier</button>
+                        </div>
+                        
+                        <div class="creator-card" data-creator="sofia">
+                            <div class="creator-card__image">👩‍💼</div>
+                            <h4 class="creator-card__name">Sofia Marino</h4>
+                            <p class="creator-card__specialty">Fine Jewelry Artisan</p>
+                            <p class="creator-card__bio">Contemporary precious metal sculptor</p>
+                            <button class="btn btn--outline creator-card__cta">Explore Atelier</button>
+                        </div>
+                        
+                        <div class="creator-card" data-creator="james">
+                            <div class="creator-card__image">👨‍🔧</div>
+                            <h4 class="creator-card__name">James Chen</h4>
+                            <p class="creator-card__specialty">Wood &amp; Fiber Artist</p>
+                            <p class="creator-card__bio">Sustainable luxury craftsman</p>
+                            <button class="btn btn--outline creator-card__cta">Explore Atelier</button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Philosophy Section -->
+                <section class="philosophy">
+                    <h3 class="section__title">Our Philosophy</h3>
+                    <p class="philosophy__text">Crumble exists to celebrate the extraordinary - connecting discerning collectors with master artisans who create pieces worthy of being treasured for generations. In a world of mass production, we champion the irreplaceable value of human artistry.</p>
+                </section>
+                
+                <!-- Newsletter -->
+                <section class="newsletter">
+                    <div class="newsletter__content">
+                        <h3 class="newsletter__title">Join Our Collector's Circle</h3>
+                        <p class="newsletter__description">Receive exclusive access to new collections and private studio visits</p>
+                        <form class="newsletter__form">
+                            <input type="email" placeholder="Your email address" class="form-control newsletter__input">
+                            <button type="submit" class="btn btn--primary newsletter__button">Subscribe</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Category Sections -->
+        <section id="ceramics" class="section section--category">
+            <div class="container">
+                <div class="category-header">
+                    <h2 class="category-title">Ceramics</h2>
+                    <p class="category-description">Each piece shaped with intention and care</p>
+                </div>
+                
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="vases">Vases</button>
+                    <button class="filter-btn" data-filter="bowls">Bowls</button>
+                    <button class="filter-btn" data-filter="dinnerware">Dinnerware</button>
+                    <button class="filter-btn" data-filter="decorative">Decorative Pieces</button>
+                </div>
+                
+                <div class="product-grid" id="ceramics-grid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <section id="jewelry" class="section section--category">
+            <div class="container">
+                <div class="category-header">
+                    <h2 class="category-title">Jewelry</h2>
+                    <p class="category-description">Handcrafted adornments that tell your story</p>
+                </div>
+                
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="earrings">Earrings</button>
+                    <button class="filter-btn" data-filter="bracelets">Bracelets</button>
+                    <button class="filter-btn" data-filter="necklaces">Necklaces</button>
+                    <button class="filter-btn" data-filter="rings">Rings</button>
+                </div>
+                
+                <div class="product-grid" id="jewelry-grid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <section id="accessories" class="section section--category">
+            <div class="container">
+                <div class="category-header">
+                    <h2 class="category-title">Accessories</h2>
+                    <p class="category-description">Elevate your space with artisan touches</p>
+                </div>
+                
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="homedecor">Home Decor</button>
+                    <button class="filter-btn" data-filter="glassware">Glassware</button>
+                    <button class="filter-btn" data-filter="textiles">Textiles</button>
+                </div>
+                
+                <div class="product-grid" id="accessories-grid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Creators Section -->
+        <section id="creators" class="section">
+            <div class="container">
+                <h2 class="section__title">Our Artisans</h2>
+                <p class="section__subtitle">Discover the makers behind each unique piece</p>
+                
+                <div class="creators-grid">
+                    <div class="creator-card" data-creator="elena">
+                        <div class="creator-card__image">👩‍🎨</div>
+                        <h3 class="creator-card__name">Elena Torres</h3>
+                        <p class="creator-card__specialty">Ceramic Artist</p>
+                        <p class="creator-card__bio">Creating organic forms inspired by nature's imperfections</p>
+                        <button class="btn btn--outline creator-card__cta">View Collection</button>
+                    </div>
+                    
+                    <div class="creator-card" data-creator="marcus">
+                        <div class="creator-card__image">👨‍🎨</div>
+                        <h3 class="creator-card__name">Marcus Weber</h3>
+                        <p class="creator-card__specialty">Glass Artisan</p>
+                        <p class="creator-card__bio">Transforming molten glass into contemporary heirlooms</p>
+                        <button class="btn btn--outline creator-card__cta">View Collection</button>
+                    </div>
+                    
+                    <div class="creator-card" data-creator="sofia">
+                        <div class="creator-card__image">👩‍💼</div>
+                        <h3 class="creator-card__name">Sofia Marino</h3>
+                        <p class="creator-card__specialty">Jewelry Designer</p>
+                        <p class="creator-card__bio">Crafting wearable stories from precious metals</p>
+                        <button class="btn btn--outline creator-card__cta">View Collection</button>
+                    </div>
+                    
+                    <div class="creator-card" data-creator="james">
+                        <div class="creator-card__image">👨‍🔧</div>
+                        <h3 class="creator-card__name">James Chen</h3>
+                        <p class="creator-card__specialty">Wood Turner</p>
+                        <p class="creator-card__bio">Revealing the hidden beauty in natural grain</p>
+                        <button class="btn btn--outline creator-card__cta">View Collection</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creator Detail Sections -->
+        <section id="creator-elena" class="section section--creator-detail">
+            <div class="container">
+                <button class="back-btn" data-section="creators">← Back to Creators</button>
+                <div class="creator-detail">
+                    <div class="creator-detail__header">
+                        <div class="creator-detail__image">👩‍🎨</div>
+                        <div class="creator-detail__info">
+                            <h2 class="creator-detail__name">Elena Torres</h2>
+                            <p class="creator-detail__specialty">Ceramic Artist</p>
+                            <p class="creator-detail__description">Elena's work celebrates the unpredictable beauty of clay, embracing cracks and asymmetry as marks of authenticity. Her organic forms draw inspiration from nature's imperfections.</p>
+                        </div>
+                    </div>
+                    <div class="creator-products" id="elena-products">
+                        <!-- Products will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="creator-marcus" class="section section--creator-detail">
+            <div class="container">
+                <button class="back-btn" data-section="creators">← Back to Creators</button>
+                <div class="creator-detail">
+                    <div class="creator-detail__header">
+                        <div class="creator-detail__image">👨‍🎨</div>
+                        <div class="creator-detail__info">
+                            <h2 class="creator-detail__name">Marcus Weber</h2>
+                            <p class="creator-detail__specialty">Glass Artisan</p>
+                            <p class="creator-detail__description">With decades of experience, Marcus brings traditional glassblowing techniques into modern design, transforming molten glass into contemporary heirlooms that capture light and imagination.</p>
+                        </div>
+                    </div>
+                    <div class="creator-products" id="marcus-products">
+                        <!-- Products will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="creator-sofia" class="section section--creator-detail">
+            <div class="container">
+                <button class="back-btn" data-section="creators">← Back to Creators</button>
+                <div class="creator-detail">
+                    <div class="creator-detail__header">
+                        <div class="creator-detail__image">👩‍💼</div>
+                        <div class="creator-detail__info">
+                            <h2 class="creator-detail__name">Sofia Marino</h2>
+                            <p class="creator-detail__specialty">Jewelry Designer</p>
+                            <p class="creator-detail__description">Sofia's jewelry pieces blend contemporary minimalism with timeless elegance, each one hand-forged in her studio to tell wearable stories from precious metals.</p>
+                        </div>
+                    </div>
+                    <div class="creator-products" id="sofia-products">
+                        <!-- Products will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="creator-james" class="section section--creator-detail">
+            <div class="container">
+                <button class="back-btn" data-section="creators">← Back to Creators</button>
+                <div class="creator-detail">
+                    <div class="creator-detail__header">
+                        <div class="creator-detail__image">👨‍🔧</div>
+                        <div class="creator-detail__info">
+                            <h2 class="creator-detail__name">James Chen</h2>
+                            <p class="creator-detail__specialty">Wood &amp; Fiber Artist</p>
+                            <p class="creator-detail__description">James creates functional art from sustainably sourced wood, revealing the hidden beauty in natural grain and highlighting each piece's unique character through masterful turning.</p>
+                        </div>
+                    </div>
+                    <div class="creator-products" id="james-products">
+                        <!-- Products will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section__title">About Crumble</h2>
+                
+                <div class="about-content">
+                    <div class="about-story">
+                        <h3 class="about-story__title">Our Story</h3>
+                        <p class="about-story__text">Crumble exists to bridge the gap between makers and mindful consumers who value authenticity over perfection. We believe that the most beautiful objects are those that bear the marks of human hands.</p>
+                    </div>
+                    
+                    <div class="about-philosophy">
+                        <h3 class="about-philosophy__title">Celebrating Imperfection</h3>
+                        <p class="about-philosophy__text">We find beauty in the slight wobble of a hand-thrown pot, the unique grain pattern in carved wood, and the individual hammered texture in metalwork. These imperfections are not flaws - they are signatures of authenticity.</p>
+                    </div>
+                    
+                    <div class="about-mission">
+                        <h3 class="about-mission__title">Our Mission</h3>
+                        <p class="about-mission__text">Supporting independent artisans, celebrating sustainable practices, and fostering appreciation for slow, intentional craftsmanship. Every piece tells a story of dedication, skill, and human creativity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section__title">Contact Us</h2>
+                
+                <div class="contact-content">
+                    <div class="contact-form-wrapper">
+                        <h3 class="contact-form__title">Get in Touch</h3>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Name</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="subject">Subject</label>
+                                <input type="text" id="subject" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea id="message" class="form-control" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3 class="contact-info__title">Visit Our Store</h3>
+                        
+                        <div class="contact-detail">
+                            <h4 class="contact-detail__title">Email</h4>
+                            <p class="contact-detail__text">hello@crumble.studio</p>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <h4 class="contact-detail__title">Phone</h4>
+                            <p class="contact-detail__text">+1 (555) 123-4567</p>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <h4 class="contact-detail__title">Hours</h4>
+                            <p class="contact-detail__text">Monday - Friday: 10am - 6pm</p>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <h4 class="contact-detail__title">Follow Us</h4>
+                            <div class="social-links">
+                                <a href="#" target="_blank" class="social-link">Instagram</a>
+                                <a href="#" target="_blank" class="social-link">Facebook</a>
+                                <a href="#" target="_blank" class="social-link">Pinterest</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
