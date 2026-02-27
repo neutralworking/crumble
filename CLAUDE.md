@@ -106,7 +106,7 @@ Always use semantic tokens in component styles, not primitive tokens directly.
 
 ### Dark Mode
 
-Dark mode is implemented via `@media (prefers-color-scheme: dark)` which overrides semantic token values. Component styles do not need dark-mode-specific rules — they inherit via semantic tokens.
+Dark mode is implemented via `@media (prefers-color-scheme: dark)` which overrides semantic token values. A `[data-color-scheme="dark"]` attribute on the root element also triggers dark mode for manual overrides. Component styles do not need dark-mode-specific rules — they inherit via semantic tokens.
 
 ### BEM Naming
 
@@ -122,7 +122,7 @@ Follow this pattern for any new components.
 ```css
 --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system, ...
 --font-family-mono: "Berkeley Mono", ui-monospace, ...
-/* Accent (headings/logo): Cinzel */
+--font-family-accent: "Cinzel", cursive;   /* accent / logo / display headings */
 
 --font-size-xs: 11px   --font-size-sm: 12px   --font-size-base: 14px
 --font-size-lg: 16px   --font-size-xl: 18px   --font-size-2xl: 20px
@@ -252,7 +252,9 @@ Since there is no build system:
 2. **Reload** the browser — no compilation step needed
 3. **Test** by opening `index.html` in any modern browser
 
-The `crumble-premium-design/` directory is a reference/backup copy. Changes should be made to the root-level files (`index.html`, `app.js`, `style.css`).
+The `crumble-premium-design/` directory is a reference/backup copy. `index.html` and `app.js` inside it are identical to the root-level files; `style.css` may differ slightly (earlier version). Always make changes to the **root-level** files only.
+
+> **Font import note:** `style.css` imports *Dancing Script* from Google Fonts (legacy), but the active accent font variable is `--font-family-accent: "Cinzel"` (changed in the most recent commit). The Dancing Script import is unused and can be cleaned up.
 
 ---
 
